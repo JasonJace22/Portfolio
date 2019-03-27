@@ -10,8 +10,7 @@
         notice shrink property since we are placing it
         as child of QToolbar
       -->
-
-<q-item clickable v-ripple @click="HIEREINFÜGEN">
+<q-item clickable v-ripple @click="instagram('http://www.instagram.de')">
       <q-item-section side class="q-pa-xs">
         <q-avatar rounded size="25px">
           <img src="statics/instagram-logo.png" />
@@ -53,7 +52,10 @@ export default {
     }
   },
   methods: {
-    openURL
+    openURL,
+    instagram (thisURL) {
+      openURL(thisURL)
+    }
   }
 }
 </script>
