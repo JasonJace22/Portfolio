@@ -48,6 +48,11 @@ module.exports = function (ctx) {
         'QSpace',
         'QImg',
         'QBadge',
+        'QDialog',
+        'QCard',
+        'QCardSection',
+        'QCardActions',
+        'QInput',
       ],
 
       directives: [
