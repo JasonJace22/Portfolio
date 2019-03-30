@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-none">
-    <q-parallax :height="600" :speed="3.0">
+  <div class="q-pt-none">
+    <q-parallax :height="750" :speed="3.0">
       <template v-slot:media>
         <img src="statics/IMG_20190217_190350.jpg">
       </template>

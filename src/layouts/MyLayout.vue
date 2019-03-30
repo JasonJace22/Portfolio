@@ -2,7 +2,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-header elevated class="text-black">
+    <q-header elevated class="text-black abc">
     <q-toolbar>
       <q-btn flat label="LOGO: J" />
       <q-space />
@@ -54,13 +54,12 @@
     </q-toolbar>
     </q-header>
 
-    <q-page-container>
+    <q-page-container class="aaa">
       <router-view />
     </q-page-container>
 
     <q-footer elevated class="text-black">
       <q-toolbar>
-        <q-space />
    <!-- Github -->
       <q-item clickable v-ripple @click="github('http://www.github.de')">
       <q-item-section side class="q-pa-xs">
@@ -114,16 +113,6 @@ export default {
 
 <style>
 
-.headerstyletop {
-  background-color: #FFFFFF00;
-  color: white !important;
-}
-
-.headerstyleNotTop {
-  background-color: white;
-  color: black !important;
-}
-
 .underline:after {
   content: ''; /* content ist leer... */
   position: absolute;
@@ -132,10 +121,17 @@ export default {
   width: 0%;
   border-bottom: 2px solid darkcyan;
   transition: 0.5s;
-  color: red !important;
 }
 
 .underline:hover:after {
   width: 100%;
+}
+
+.abc {
+  opacity: 0.5;
+}
+
+.aaa {
+  padding-top: 0px !important
 }
 </style>
