@@ -53,6 +53,10 @@ module.exports = function (ctx) {
         'QCardSection',
         'QCardActions',
         'QInput',
+        'QLinearProgress',
+        'QCircularProgress',
+        'QKnob',
+        'QScrollObserver'
       ],
 
       directives: [

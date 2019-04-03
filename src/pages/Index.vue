@@ -10,6 +10,21 @@
     <br><br><br><br><br>
 
     <div>
+      <q-knob
+      :min="20"
+      :max="70"
+      v-model="value22"
+      show-value
+      size="50px"
+      :thickness="0.22"
+      color="teal"
+      track-color="grey-3"
+      class="q-ma-md"
+    />
+    FÄHIGKEITEN!
+    </div>
+    <br>
+    <div>
       <q-circular-progress
       reverse
       :value="value"
@@ -23,29 +38,12 @@
     Skills
     </div>
     <div class="q-gutter-md row mitte">
-
+      <div>adsasd</div><br>
       <q-linear-progress style="height: 10px" :value="progress" color="black" class="col-3"></q-linear-progress>
-
-      <div color="black" class="col-3">sadasd</div>
-
- 
-
-      <q-linear-progress rounded style="height: 20px" :value="progress" color="warning" class="q-mt-sm" ></q-linear-progress>
-
- 
-
-      <q-linear-progress rounded style="height: 15px" :value="progress" color="secondary" class="q-mt-sm" ></q-linear-progress>
-
- 
-
-      <q-linear-progress style="height: 25px" :value="progress" color="accent" class="q-mt-sm" ></q-linear-progress>
     </div>
- 
-
+    <br><br><br>
 </div>
 </template>
-
- 
 
 <style>
 .mitte {
@@ -55,17 +53,15 @@
 }
 </style>
 
- 
-
 <script>
 export default {
   name: 'PageIndex',
   data () {
     return {
       value: 71,
+      value22: 55,
       progress: 0.4
     }
   }
 }
-
 </script>

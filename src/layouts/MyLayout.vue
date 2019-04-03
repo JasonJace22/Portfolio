@@ -1,8 +1,8 @@
 
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf" @scroll="onScroll">
 
-    <q-header elevated class="text-black abc">
+    <q-header :class="{toptop : isTop, nottop : !isTop}">
     <q-toolbar>
       <q-btn flat label="LOGO: J" />
       <q-space />
@@ -27,7 +27,7 @@
         <q-card-section>
             <div class="q-pa-md">
               <div class="q-gutter-md" style="max-width: 300px">
-                  <q-input outlined color="white" v-model="text" label="NAME">
+                  <q-input outlined color="white" label="NAME">
                     <template v-slot:prepend>
                       <q-icon name="event" />
                     </template>
@@ -36,7 +36,7 @@
               </div>
               <div class="q-pa-md">
               <div class="q-gutter-md" style="max-width: 300px">
-                  <q-input outlined color="white" v-model="text" label="PASSWORT">
+                  <q-input outlined color="white" label="PASSWORT">
                     <template v-slot:prepend>
                       <q-icon name="event" />
                     </template>
@@ -96,7 +96,9 @@ export default {
   data () {
     return {
       scrollPos: false,
-      dialog: false
+      dialog: false,
+      isTop: true,
+      scrollInfo: { }
     }
   },
   methods: {
@@ -106,6 +108,14 @@ export default {
     },
     github (thisURL) {
       openURL(thisURL)
+    },
+    onScroll (info) {
+      this.scrollInfo = info
+      if (info.position === 0) {
+        this.isTop = true
+      } else {
+        this.isTop = false
+      }
     }
   }
 }
@@ -127,11 +137,17 @@ export default {
   width: 100%;
 }
 
-.abc {
-  opacity: 0.5;
-}
-
 .aaa {
   padding-top: 0px !important
+}
+
+.toptop {
+  background-color: #FFFFFF00;
+  transition: all 0.5s ease;
+  color: white
+}
+
+.nottop {
+  color: black
 }
 </style>
